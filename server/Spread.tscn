@@ -1,0 +1,39 @@
+[gd_scene format=2]
+
+[node name="Spread" type="Position3D"]
+
+[node name="BlastPosition" type="Position3D" parent="."]
+transform = Transform( 0.99853, 0, 0.0542008, 0, 1, 0, -0.0542008, 0, 0.99853, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="BlastPosition2" type="Position3D" parent="."]
+transform = Transform( 0.999694, 0, -0.0247288, 0, 1, 0, 0.0247288, 0, 0.999694, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition2"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="BlastPosition3" type="Position3D" parent="."]
+transform = Transform( 0.995544, 0, 0.0942994, 0, 1, 0, -0.0942994, 0, 0.995544, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition3"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="BlastPosition4" type="Position3D" parent="."]
+transform = Transform( 0.98771, 0, 0.156297, 0, 1, 0, -0.156297, 0, 0.98771, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition4"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="BlastPosition5" type="Position3D" parent="."]
+transform = Transform( 0.995591, 0, -0.0937955, 0, 1, 0, 0.0937955, 0, 0.995591, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition5"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="BlastPosition6" type="Position3D" parent="."]
+transform = Transform( 0.987971, 0, -0.154641, 0, 1, 0, 0.154641, 0, 0.987971, 0, 0, -1.1497 )
+
+[node name="RayCast" type="RayCast" parent="BlastPosition6"]
+cast_to = Vector3( 0, 0, -100 )

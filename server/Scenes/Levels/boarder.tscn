@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 171.816, 30, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="BoarderCollision" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.1286, 162.597 )
+shape = SubResource( 1 )
+
+[node name="BoarderCollision2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.1286, -152.912 )
+shape = SubResource( 1 )
+
+[node name="BoarderCollision3" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 154.003, 28.1286, -1.60974 )
+shape = SubResource( 1 )
+
+[node name="BoarderCollision4" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -159.958, 28.1286, -1.60974 )
+shape = SubResource( 1 )
