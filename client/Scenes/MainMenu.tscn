@@ -1,0 +1,268 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/ui/button_3.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/robo_32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/ui/camp.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/grass_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/robo_16.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/ui/button_2.png" type="Texture" id=6]
+[ext_resource path="res://assets/ui/button_1.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=8]
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Scenes/SettingsPanel.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 9 )
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1975.0
+margin_bottom = 1141.0
+texture = ExtResource( 4 )
+expand = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camp" type="Sprite" parent="Background"]
+position = Vector2( 1600, 289 )
+rotation = 1.99129
+texture = ExtResource( 3 )
+
+[node name="Camp2" type="Sprite" parent="Background"]
+position = Vector2( 232, 828 )
+texture = ExtResource( 3 )
+
+[node name="FindServer" type="TextureButton" parent="."]
+margin_left = 828.0
+margin_top = 375.0
+margin_right = 1066.0
+margin_bottom = 466.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="FindServer"]
+margin_left = 44.0
+margin_top = 13.0
+margin_right = 201.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
+text = "Find Server"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="FindServer/Label"]
+margin_left = 25.0
+margin_top = 35.0
+margin_right = 123.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 5 )
+text = "(there's just 1)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LocalServer" type="TextureButton" parent="."]
+margin_left = 22.0
+margin_top = 25.0
+margin_right = 260.0
+margin_bottom = 116.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="LocalServer"]
+margin_left = 44.0
+margin_top = 13.0
+margin_right = 201.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
+text = "Local Server"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="."]
+margin_left = 828.0
+margin_top = 563.0
+margin_right = 1066.0
+margin_bottom = 654.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings"]
+margin_left = 41.0
+margin_top = 26.0
+margin_right = 198.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 2 )
+text = "Settings"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 827.0
+margin_top = 763.0
+margin_right = 1065.0
+margin_bottom = 854.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Quit"]
+margin_left = 42.0
+margin_top = 24.0
+margin_right = 199.0
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="."]
+margin_left = 787.0
+margin_top = 303.0
+margin_right = 1095.0
+margin_bottom = 351.0
+custom_fonts/font = ExtResource( 2 )
+align = 1
+placeholder_text = "Username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsPanel" type="Panel" parent="."]
+visible = false
+margin_left = 64.0
+margin_top = 43.0
+margin_right = 1876.0
+margin_bottom = 1006.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeaderLabel" type="Label" parent="SettingsPanel"]
+margin_left = 571.0
+margin_top = 7.0
+margin_right = 1224.0
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Settings"
+align = 1
+
+[node name="Back" type="TextureButton" parent="SettingsPanel"]
+margin_left = 1569.0
+margin_top = 6.0
+margin_right = 1807.0
+margin_bottom = 97.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingsPanel/Back"]
+margin_left = 42.0
+margin_top = 24.0
+margin_right = 199.0
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 2 )
+text = "Back
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graphicslabel" type="Label" parent="SettingsPanel"]
+margin_left = 1484.0
+margin_top = 198.0
+margin_right = 1682.0
+margin_bottom = 258.0
+custom_fonts/font = SubResource( 2 )
+text = "Graphics"
+
+[node name="Fullscreen" type="Label" parent="SettingsPanel/Graphicslabel"]
+margin_left = -60.0
+margin_top = 120.0
+margin_right = 89.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fullscreen"
+
+[node name="CheckButton" type="CheckButton" parent="SettingsPanel/Graphicslabel/Fullscreen"]
+margin_left = 264.0
+margin_top = 1.0
+margin_right = 340.0
+margin_bottom = 41.0
+pressed = true
+
+[node name="Lighting" type="Label" parent="SettingsPanel/Graphicslabel"]
+margin_left = -56.0
+margin_top = 207.0
+margin_right = 93.0
+margin_bottom = 245.0
+custom_fonts/font = ExtResource( 2 )
+text = "Lighting"
+
+[node name="CheckButton" type="CheckButton" parent="SettingsPanel/Graphicslabel/Lighting"]
+margin_left = 264.0
+margin_top = 1.0
+margin_right = 340.0
+margin_bottom = 41.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="SettingsPanel"]
+margin_left = 1348.0
+margin_top = 234.0
+margin_right = 1352.0
+margin_bottom = 907.0
+
+[connection signal="pressed" from="FindServer" to="." method="_on_FindServer_pressed"]
+[connection signal="pressed" from="LocalServer" to="." method="_on_LocalServer_pressed"]
+[connection signal="toggled" from="LocalServer" to="." method="_on_LocalServer_toggled"]
+[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="SettingsPanel/Back" to="." method="_on_Settings_Back_pressed"]
+[connection signal="toggled" from="SettingsPanel/Graphicslabel/Fullscreen/CheckButton" to="SettingsPanel" method="_on_Fullscreen_toggled"]
+[connection signal="toggled" from="SettingsPanel/Graphicslabel/Lighting/CheckButton" to="SettingsPanel" method="_on_Lighting_toggled"]
